@@ -36,6 +36,7 @@ while cap.isOpened():
     rgb_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     input_tensor = vision.TensorImage.create_from_array(rgb_image)
     detection_result = detector.detect(input_tensor)
+    print(detection_result)
     
     if cv2.waitKey(1) == 27:
         break
